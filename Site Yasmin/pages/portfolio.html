@@ -7,7 +7,6 @@
     <title>Portfólio | Yasmin Lopes - Projetos & Legalização</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* CSS Específico da Galeria de Portfólio */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -88,7 +87,6 @@
             color: #d4d4d8;
         }
 
-        /* Ajuste para o logo SVG */
         .logo-svg-header {
             width: 38px;
             height: 38px;
@@ -159,19 +157,14 @@
                     <!-- PROJETO 01 -->
                     <article class="portfolio-card">
                         <div class="portfolio-image">
-                            <!-- Ilustração da Planta Baixa Residencial em Blueprint -->
                             <svg width="220" height="180" viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="220" height="180" fill="#09090b" />
-                                <!-- Parede Externa -->
                                 <rect x="20" y="20" width="180" height="140" fill="none" stroke="#2f6df6" stroke-width="4"/>
-                                <!-- Divisórias Internas -->
                                 <line x1="100" y1="20" x2="100" y2="160" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4,2"/>
                                 <line x1="100" y1="80" x2="200" y2="80" stroke="#60a5fa" stroke-width="2"/>
                                 <line x1="20" y1="100" x2="100" y2="100" stroke="#60a5fa" stroke-width="2"/>
-                                <!-- Portas / Aberturas -->
                                 <path d="M 60 100 A 20 20 0 0 1 80 120" fill="none" stroke="#38bdf8" stroke-width="2"/>
                                 <path d="M 100 50 A 20 20 0 0 1 120 70" fill="none" stroke="#38bdf8" stroke-width="2"/>
-                                <!-- Cotas de Medição -->
                                 <line x1="20" y1="10" x2="180" y2="10" stroke="#52525b" stroke-width="1"/>
                                 <text x="90" y="8" fill="#a1a1aa" font-size="8">8.50m</text>
                             </svg>
@@ -183,85 +176,6 @@
                             <ul class="portfolio-details">
                                 <li>Escopo: <span>Desenho Técnico & Layout</span></li>
                                 <li>Etapa: <span>Estudo Preliminar</span></li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <!-- PROJETO 02 -->
-                    <article class="portfolio-card">
-                        <div class="portfolio-image">
-                            <!-- Ilustração de Prancha de Aprovação de Prefeitura -->
-                            <svg width="220" height="180" viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="220" height="180" fill="#09090b" />
-                                <!-- Prancha Padrão Prefeitura -->
-                                <rect x="20" y="15" width="180" height="150" fill="#18181b" stroke="#3f3f46" stroke-width="2"/>
-                                <!-- Carimbo / Selo de Aprovação -->
-                                <rect x="120" y="105" width="75" height="55" fill="#27272a" stroke="#2f6df6" stroke-width="1.5"/>
-                                <line x1="120" y1="120" x2="195" y2="120" stroke="#3f3f46"/>
-                                <line x1="120" y1="135" x2="195" y2="135" stroke="#3f3f46"/>
-                                <!-- Desenhos em Miniatura na Prancha -->
-                                <rect x="30" y="25" width="50" height="40" fill="none" stroke="#60a5fa" stroke-width="1"/>
-                                <rect x="90" y="25" width="50" height="40" fill="none" stroke="#60a5fa" stroke-width="1"/>
-                                <polygon points="30,110 55,80 80,110" fill="none" stroke="#38bdf8" stroke-width="1"/>
-                            </svg>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-tag">Projeto Legal</span>
-                            <h3>Prancha de Aprovação Municipal</h3>
-                            <p>Elaboração da prancha técnica completa conforme exigências do Código de Obras municipal, com quadro de áreas e carimbo padrão.</p>
-                            <ul class="portfolio-details">
-                                <li>Escopo: <span>Projeto Legal de Prefeitura</span></li>
-                                <li>Objetivo: <span>Obtenção de Alvará de Construção</span></li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <!-- PROJETO 03 -->
-                    <article class="portfolio-card">
-                        <div class="portfolio-image">
-                            <!-- Ilustração de Imóvel com Selo de Regularização / Habite-se -->
-                            <svg width="220" height="180" viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="220" height="180" fill="#09090b" />
-                                <!-- Casa em linhas -->
-                                <path d="M 40 130 L 40 80 L 110 30 L 180 80 L 180 130 Z" fill="none" stroke="#52525b" stroke-width="2"/>
-                                <rect x="90" y="90" width="30" height="40" fill="none" stroke="#52525b" stroke-width="1.5"/>
-                                <!-- Selo de Regularizado / Aprovado -->
-                                <circle cx="140" cy="110" r="30" fill="#18181b" stroke="#22c55e" stroke-width="3"/>
-                                <path d="M 128 110 L 136 118 L 152 100" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-tag">Regularização</span>
-                            <h3>Regularização de Imóvel Existente</h3>
-                            <p>Levantamento métrico no local e adequação documental de residência construída sem prévia aprovação para obtenção de Habite-se.</p>
-                            <ul class="portfolio-details">
-                                <li>Escopo: <span>Levantamento & Laudo Técnico</span></li>
-                                <li>Status: <span>Regularizado e Averbado</span></li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <!-- PROJETO 04 -->
-                    <article class="portfolio-card">
-                        <div class="portfolio-image">
-                            <!-- Ilustração de Projeto de Ampliação / Reforma -->
-                            <svg width="220" height="180" viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="220" height="180" fill="#09090b" />
-                                <!-- Área Existente (Cinza) -->
-                                <rect x="30" y="50" width="80" height="90" fill="none" stroke="#52525b" stroke-width="2"/>
-                                <text x="42" y="98" fill="#71717a" font-size="10">EXISTENTE</text>
-                                <!-- Área a Construir (Azul Tracejada) -->
-                                <rect x="110" y="50" width="80" height="90" fill="none" stroke="#2f6df6" stroke-width="2" stroke-dasharray="5,3"/>
-                                <text x="120" y="98" fill="#60a5fa" font-size="10">AMPLIAÇÃO</text>
-                            </svg>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-tag">Reforma & Ampliação</span>
-                            <h3>Projeto de Ampliação Residencial</h3>
-                            <p>Planejamento de área de lazer e novo pavimento, diferenciando claramente a área existente da nova área a ser construída.</p>
-                            <ul class="portfolio-details">
-                                <li>Escopo: <span>Estudo de Viabilidade & Desenho</span></li>
-                                <li>Foco: <span>Aproveitamento de Terreno</span></li>
                             </ul>
                         </div>
                     </article>
