@@ -5,94 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yasmin Lopes | Projetos & Legalização</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="container header-content">
-            <a href="index.html" class="logo" aria-label="Ir para a página inicial">
-                <img src="img/logo.jpeg" alt="Logo Yasmin Lopes" class="logo-img">
-                YASMIN LOPES <span>| PROJETOS</span>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.jpeg" alt="Logo Yasmin Lopes">
             </a>
-
-            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <nav class="navigation" id="nav-list" role="navigation" aria-label="Menu principal">
-                <a href="index.html" class="active">Início</a>
-                <a href="pages/sobre.html">Sobre</a>
-                <a href="pages/servicos.html">Serviços</a>
-                <a href="pages/portfolio.html">Portfólio</a>
-                <a href="pages/contato.html">Contato</a>
-                <a href="https://wa.me/5515997723131?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="header-button">Falar no WhatsApp</a>
-            </nav>
         </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="pages/sobre.html">Sobre Mim</a></li>
+                <li><a href="pages/servicos.html">Serviços</a></li>
+                <li><a href="pages/portifolio.html">Portfólio</a></li>
+                <li><a href="pages/contato.html">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main id="main-content">
+    <main>
         <section class="hero">
-            <div class="container hero-content">
-                <div>
-                    <p class="small-title">Arquitetura & Legalização</p>
-                    <h1>Design Clean. <span>Espaços Atemporais.</span></h1>
-                    <p class="hero-description">Desenvolvimento de projetos focados em funcionalidade, elegância e soluções completas em legalização de imóveis.</p>
-                    <a href="pages/portfolio.html" class="button-primary">Ver Portfólio</a>
+            <div class="hero-content">
+                <h1>Projetos & Legalização</h1>
+                <p>Soluções práticas e suporte técnico completo para você iniciar sua obra com total segurança e regularidade legal.</p>
+                <div class="hero-buttons">
+                    <a href="pages/servicos.html" class="btn btn-primary">Ver Serviços</a>
+                    <a href="pages/contato.html" class="btn btn-secondary">Entrar em Contato</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="section container">
-            <div class="section-title">
-                <h2>Especialidades</h2>
-                <p>Soluções sob medida para o seu ambiente e regularização</p>
-            </div>
-            <div class="grid-cards">
-                <article class="card">
-                    <div class="card-number">01</div>
-                    <h3>Projeto Arquitetônico</h3>
-                    <p>Planejamento completo com foco em conforto, iluminação natural e aproveitamento de espaço.</p>
-                </article>
-                <article class="card">
-                    <div class="card-number">02</div>
-                    <h3>Legalização de Imóveis</h3>
-                    <p>Processo completo para regularização e aprovação junto aos órgãos competentes.</p>
-                </article>
-                <article class="card">
-                    <div class="card-number">03</div>
-                    <h3>Consultoria Técnica</h3>
-                    <p>Direcionamento técnico e estético para otimização e viabilidade de projetos.</p>
-                </article>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <div>
-                <a href="index.html" class="logo">
-                    <img src="img/logo.jpeg" alt="Logo Yasmin Lopes" class="logo-img">
-                    YASMIN LOPES <span>| PROJETOS</span>
-                </a>
-                <p style="margin-top: 8px;">Escritório de Projetos e Legalização de Imóveis</p>
-            </div>
-            <p>&copy; 2026 Todos os direitos reservados.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 Yasmin Lopes. Todos os direitos reservados.</p>
     </footer>
-
-    <script>
-        const menuToggle = document.getElementById('mobile-menu');
-        const navList = document.getElementById('nav-list');
-
-        if (menuToggle && navList) {
-            menuToggle.addEventListener('click', () => {
-                const isOpen = navList.classList.toggle('open');
-                menuToggle.setAttribute('aria-expanded', isOpen);
-            });
-        }
-    </script>
 
 </body>
 </html>
