@@ -8,21 +8,33 @@
 </head>
 <body>
 
+    <!-- ================= HEADER ================= -->
     <header class="header">
         <div class="container header-content">
             <a href="../index.html" class="logo">
                 <img src="../img/logo.png" alt="Logo Yasmin Lopes" class="logo-img">
                 YASMIN LOPES <span>| PROJETOS</span>
             </a>
-            <nav class="navigation">
+
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navigation" id="nav-list">
                 <a href="../index.html">Início</a>
                 <a href="sobre.html">Sobre</a>
+                <a href="servicos.html">Serviços</a>
                 <a href="portfolio.html" class="active">Portfólio</a>
-                <a href="contato.html" class="header-button">Contato</a>
+                <a href="contato.html">Contato</a>
             </nav>
+
+            <a href="https://wa.me/5515997723131?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="header-button">Falar no WhatsApp</a>
         </div>
     </header>
 
+    <!-- ================= MAIN ================= -->
     <main class="container section">
         <div class="section-title">
             <p class="small-title">Projetos</p>
@@ -48,15 +60,31 @@
         </div>
     </main>
 
+    <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="container footer-content">
-            <a href="../index.html" class="logo">
-                <img src="../img/logo.png" alt="Logo Yasmin Lopes" class="logo-img">
-                YASMIN LOPES
-            </a>
-            <p>&copy; 2026 Yasmin Lopes. Todos os direitos reservados.</p>
+            <div>
+                <a href="../index.html" class="logo">
+                    <img src="../img/logo.png" alt="Logo Yasmin Lopes" class="logo-img">
+                    YASMIN LOPES <span>| PROJETOS</span>
+                </a>
+                <p style="margin-top: 8px;">Escritório de Projetos e Legalização de Imóveis</p>
+            </div>
+            <p>&copy; 2026 Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        if (menuToggle && navList) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navList.classList.toggle('open');
+            });
+        }
+    </script>
 
 </body>
 </html>
