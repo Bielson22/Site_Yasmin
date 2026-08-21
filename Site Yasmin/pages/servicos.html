@@ -48,8 +48,15 @@
                 YASMIN LOPES <span style="margin-left: 6px; color: #a1a1aa; font-weight: normal;">| PROJETOS</span>
             </a>
 
-            <!-- NAVEGAÇÃO ATUALIZADA COM PORTFÓLIO -->
-            <nav class="navigation">
+            <!-- Botão Menu Mobile (Android/iOS) -->
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- NAVEGAÇÃO -->
+            <nav class="navigation" id="nav-list">
                 <a href="../index.html">Início</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="servicos.html" class="active">Serviços</a>
@@ -106,6 +113,19 @@
                         <h3>Projetos de Reforma e Ampliação</h3>
                         <p>Planejamento de alterações e expansões no seu imóvel com apresentação clara das áreas mantidas, demolidas e a construir.</p>
                     </article>
+
+                    <!-- NOVOS SERVIÇOS ADICIONADOS -->
+                    <article class="card">
+                        <div class="card-number">07</div>
+                        <h3>Regularização na Receita Federal (CNO, CND)</h3>
+                        <p>Abertura e gestão do Cadastro Nacional de Obras (CNO) e obtenção da Certidão Negativa de Débitos (CND) para quitação fiscal da edificação.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-number">08</div>
+                        <h3>Averbação no Cartório</h3>
+                        <p>Encaminhamento e gestão documental junto ao Cartório de Registro de Imóveis para constar a construção finalizada na matrícula do seu imóvel.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -131,6 +151,17 @@
             <p>© 2026 Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <!-- Script de Alternância do Menu Mobile -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navList.classList.toggle('open');
+        });
+    </script>
 
 </body>
 
