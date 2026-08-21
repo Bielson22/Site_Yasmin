@@ -60,8 +60,9 @@ img {
 
 .header-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 14px;
 }
 
 .logo {
@@ -85,18 +86,26 @@ img {
     font-weight: 400;
 }
 
-/* Navegação Desktop */
+/* Esconde o botão de 3 riscos definitivamente */
+.menu-toggle {
+    display: none !important;
+}
+
+/* Navegação Visível Continuamente */
 .navigation {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 12px 20px;
+    width: 100%;
 }
 
 .navigation a {
     font-size: 14px;
     font-weight: 600;
     color: var(--text-muted);
-    padding: 6px 0;
+    padding: 4px 0;
 }
 
 .navigation a:hover,
@@ -118,6 +127,9 @@ img {
     border-radius: 6px;
     border: 1px solid var(--text-primary);
     cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
 }
 
 .header-button:hover, .button-primary:hover {
@@ -126,62 +138,22 @@ img {
     color: var(--text-primary) !important;
 }
 
-/* Botão Mobile Hambúrguer */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.menu-toggle span {
-    width: 100%;
-    height: 3px;
-    background-color: var(--text-primary);
-    border-radius: 2px;
-}
-
 /* =========================================
-   AJUSTES RESPONSIVOS (MOBILE)
+   LAYOUT DESKTOP (Telas Maiores que 868px)
 ========================================= */
-@media (max-width: 868px) {
-    .menu-toggle {
-        display: flex;
-    }
-
+@media (min-width: 869px) {
     .header-content {
-        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .navigation {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #FFFFFF;
-        padding: 20px 0 10px 0;
-        gap: 16px;
-        border-top: 1px solid var(--border-color);
-        margin-top: 15px;
-    }
-
-    .navigation.open {
-        display: flex;
-    }
-
-    .navigation a {
-        width: 100%;
-        text-align: center;
-        padding: 8px 0;
+        width: auto;
+        gap: 24px;
     }
 
     .header-button {
-        width: 100%;
-        margin-top: 8px;
+        width: auto;
     }
 }
 
@@ -189,7 +161,7 @@ img {
    HERO & CONTEÚDO PRINCIPAL
 ========================================= */
 .hero {
-    padding: 80px 0 60px 0;
+    padding: 60px 0 40px 0;
 }
 
 .small-title {
