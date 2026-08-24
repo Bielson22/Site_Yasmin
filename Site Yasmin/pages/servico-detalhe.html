@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Serviço | Yasmin Lopes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .service-detail-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+        .service-steps {
+            margin: 24px 0;
+            padding-left: 20px;
+        }
+        .service-steps li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <img src="../img/logo.jpeg" alt="Logo Yasmin Lopes" class="logo-img">
+                YASMIN LOPES <span>| PROJETOS</span>
+            </a>
+            <nav class="navigation" id="nav-list">
+                <a href="../index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <a href="servicos.html" class="back-link">&larr; Voltar para Serviços</a>
+        
+        <article class="service-detail-container">
+            <span class="small-title" id="service-id">SERVIÇO 01</span>
+            <h1 id="service-title" style="margin-top: 8px; color: #222;">Projeto Arquitetônico</h1>
+            
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+            
+            <p id="service-desc" style="font-size: 1.1rem; line-height: 1.7; color: #444;">
+                Descrição detalhada do serviço...
+            </p>
+
+            <h3 style="margin-top: 28px;">Como funciona este processo:</h3>
+            <ul class="service-steps" id="service-steps">
+                <!-- Etapas preenchidas dinamicamente via JS -->
+            </ul>
+
+            <div style="margin-top: 36px; text-align: center;">
+                <a id="service-wsp-btn" href="https://wa.me/5515997723131" target="_blank" class="button-primary" style="display: inline-block; padding: 14px 28px; text-decoration: none;">
+                    Solicitar Orçamento para este Serviço
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Yasmin Lopes • Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const servicesData = {
+            "1": {
+                num: "SERVIÇO 01",
+                title: "Projeto Arquitetônico",
+                desc: "O projeto arquitetônico é o primeiro passo para transformar sua ideia em realidade. Desenvolvemos o planejamento espacial completo alinhando estética, funcionalidade e normas técnicas vigentes.",
+                steps: [
+                    "Reunião de alinhamento (Briefing) para entender suas necessidades e preferências.",
+                    "Estudo preliminar e implantação do imóvel no terreno.",
+                    "Desenvolvimento de plantas baixas, cortes, fachadas e layout humanizado.",
+                    "Entrega do arquivo técnico pronto para execução da obra."
+                ]
+            },
+            "2": {
+                num: "SERVIÇO 02",
+                title: "Legalização de Imóveis",
+                desc: "Regularizamos imóveis construídos ou reformados sem prévia aprovação da Prefeitura, garantindo que sua propriedade fique 100% regularizada perante a lei e livre de multas.",
+                steps: [
+                    "Vistoria e análise diagnóstica da situação atual do imóvel.",
+                    "Levantamento métrico e elaboração das plantas 'como construído' (As Built).",
+                    "Montagem do processo administrativo para a Prefeitura local.",
+                    "Acompanhamento até a expedição da Certidão de Regularidade."
+                ]
+            },
+            "3": {
+                num: "SERVIÇO 03",
+                title: "Aprovação de Projetos & Alvarás",
+                desc: "Gerenciamos toda a burocracia para aprovação de projetos arquitetônicos novos junto à prefeitura e órgãos competentes antes do início das obras.",
+                steps: [
+                    "Análise do Código de Obras e Plano Diretor do município.",
+                    "Adequação das pranchas técnicas aos padrões exigidos pela prefeitura.",
+                    "Protocolo e acompanhamento das análises de comissão de urbanismo.",
+                    "Emissão do Alvará de Construção liberando o início da obra."
+                ]
+            },
+            "4": {
+                num: "SERVIÇO 04",
+                title: "Emissão de Habite-se",
+                desc: "O Habite-se é o documento que atesta que o imóvel foi construído conforme o projeto aprovado e está seguro para habitação.",
+                steps: [
+                    "Verificação do cumprimento das condicionantes do projeto aprovado.",
+                    "Solicitação de vistoria fiscal do município.",
+                    "Obtenção de certidões e laudos necessários.",
+                    "Emissão do Auto de Conclusão / Carta de Habite-se."
+                ]
+            },
+            "5": {
+                num: "SERVIÇO 05",
+                title: "Levantamento Métrico",
+                desc: "Medição de precisão de imóveis já construídos para gerar plantas exatas do espaço atual, indispensável para reformas ou regularizações.",
+                steps: [
+                    "Visita técnica ao local para medição minuciosa de todos os ambientes.",
+                    "Registro de aberturas, pilares, vigas e interferências prediais.",
+                    "Vetorização gráfica e modelagem dos desenhos técnicos em CAD.",
+                    "Entrega das pranchas contendo dimensões exatas e áreas construídas."
+                ]
+            },
+            "6": {
+                num: "SERVIÇO 06",
+                title: "Projetos de Reforma e Ampliação",
+                desc: "Planejamento para modificar, modernizar ou expandir espaços existentes garantindo segurança estrutural e aproveitamento inteligente.",
+                steps: [
+                    "Mapeamento das estruturas e instalações existentes.",
+                    "Estudo das áreas a demolir, manter ou construir.",
+                    "Projeto detalhado de novos acabamentos e redistribuição dos espaços.",
+                    "Detalhamento técnico para equipe de execução da obra."
+                ]
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id') || '1';
+        const data = servicesData[id] || servicesData['1'];
+
+        document.getElementById('service-id').textContent = data.num;
+        document.getElementById('service-title').textContent = data.title;
+        document.getElementById('service-desc').textContent = data.desc;
+        document.getElementById('service-wsp-btn').href = `https://wa.me/5515997723131?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20o%20serviço%20de%20${encodeURIComponent(data.title)}.`;
+
+        const stepsUl = document.getElementById('service-steps');
+        stepsUl.innerHTML = '';
+        data.steps.forEach(step => {
+            const li = document.createElement('li');
+            li.textContent = step;
+            stepsUl.appendChild(li);
+        });
+    </script>
+</body>
+</html>
