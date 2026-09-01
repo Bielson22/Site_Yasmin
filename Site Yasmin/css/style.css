@@ -115,7 +115,7 @@ img {
 }
 
 /* Botões */
-.header-button, 
+.header-button,
 .button-primary {
     display: inline-flex;
     align-items: center;
@@ -133,11 +133,20 @@ img {
     text-align: center;
 }
 
-.header-button:hover, 
+.header-button:hover,
 .button-primary:hover {
     background-color: var(--accent-gold);
     border-color: var(--accent-gold);
     color: var(--text-primary) !important;
+}
+
+/* Acessibilidade para navegação via teclado */
+.navigation a:focus-visible,
+.header-button:focus-visible,
+.button-primary:focus-visible,
+.card-link:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 4px;
 }
 
 /* =========================================
@@ -160,10 +169,10 @@ img {
 }
 
 /* =========================================
-   HERO & CONTEÚDO PRINCIPAL (COM IMAGENS DE FUNDO)
+   HERO & CONTEÚDO PRINCIPAL (IMAGENS DE FUNDO)
 ========================================= */
 
-/* Fundo da Hero na index.html (Opção 2 - Planta Técnica) */
+/* Fundo da Hero na index.html */
 .hero {
     padding: 80px 0 60px 0;
     background-image: linear-gradient(to right, rgba(248, 247, 245, 0.92) 35%, rgba(248, 247, 245, 0.45)), 
@@ -173,7 +182,7 @@ img {
     background-size: cover;
 }
 
-/* Fundo para a página sobre.html (Opção 3 - Minimalista Iluminado) */
+/* Fundo para a página sobre.html */
 body.sobre-page {
     background-image: linear-gradient(to right, rgba(248, 247, 245, 0.92) 40%, rgba(248, 247, 245, 0.5)), 
                       url('../img/hero-bg-3.jpg');
@@ -230,7 +239,7 @@ body.sobre-page {
     font-size: 16px;
 }
 
-/* Grid de Cards */
+/* Grid de Cards & Links */
 .grid-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -245,9 +254,15 @@ body.sobre-page {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
 .card-number {
@@ -267,6 +282,18 @@ body.sobre-page {
     color: var(--text-muted);
     font-size: 15px;
     line-height: 1.5;
+}
+
+/* Estilos de Conteúdo da Página Sobre */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
 }
 
 /* =========================================
@@ -298,4 +325,8 @@ body.sobre-page {
 .footer p {
     color: var(--text-muted);
     font-size: 14px;
+}
+
+.footer-info {
+    margin-top: 8px;
 }
