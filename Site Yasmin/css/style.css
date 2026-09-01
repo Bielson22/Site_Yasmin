@@ -166,14 +166,14 @@ img {
 }
 
 /* =========================================
-   HERO & CONTEÚDO PRINCIPAL (IMAGENS DE FUNDO)
+   HERO & CONTEÚDO PRINCIPAL (IMAGENS DE FUNDO ATUALIZADAS)
 ========================================= */
 
 /* Fundo da Hero na index.html */
 .hero {
     padding: 80px 0 60px 0;
     background-image: linear-gradient(to right, rgba(248, 247, 245, 0.92) 35%, rgba(248, 247, 245, 0.45)), 
-                      url('../img/hero-bg-2.jpg');
+                      url('../img/Fundo1.PNG');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -182,7 +182,7 @@ img {
 /* Fundo para a página sobre.html */
 body.sobre-page {
     background-image: linear-gradient(to right, rgba(248, 247, 245, 0.92) 40%, rgba(248, 247, 245, 0.5)), 
-                      url('../img/hero-bg-3.jpg');
+                      url('../img/Fundo2.PNG');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -259,11 +259,11 @@ body.sobre-page {
 
 .card-link:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
 .card-number {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 800;
     color: var(--accent-gold);
     margin-bottom: 12px;
@@ -271,25 +271,26 @@ body.sobre-page {
 
 .card h3 {
     font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
 }
 
 .card p {
     color: var(--text-muted);
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
-/* Página Sobre */
-.about-content p {
-    font-size: 18px;
-    color: var(--text-muted);
-    margin-bottom: 20px;
+/* Estilos de Conteúdo da Página Sobre */
+.about-content {
     max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
 }
 
-.about-content strong {
-    color: var(--text-primary);
+.about-content p {
+    margin-bottom: 1.5rem;
 }
 
 /* =========================================
@@ -299,26 +300,30 @@ body.sobre-page {
     background: #FFFFFF;
     border-top: 1px solid var(--border-color);
     padding: 40px 0;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
-    justify-content: space-between;
-    align-items: flex-start;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
     .footer-content {
         flex-direction: row;
-        align-items: center;
+        justify-content: space-between;
+        text-align: left;
     }
 }
 
-.footer-info {
-    font-size: 14px;
+.footer p {
     color: var(--text-muted);
+    font-size: 14px;
+}
+
+.footer-info {
     margin-top: 8px;
 }
