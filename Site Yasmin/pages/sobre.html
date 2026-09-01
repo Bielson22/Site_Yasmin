@@ -6,14 +6,6 @@
     <title>Sobre | Lopes</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/jpeg" href="../img/logo.jpeg">
-    <style>
-        /* Garantia de fundo direto na página Sobre */
-        body {
-            background: linear-gradient(to right, rgba(248, 247, 245, 0.92) 40%, rgba(248, 247, 245, 0.5)), 
-                        url('../img/hero-bg-3.jpg') no-repeat center top/cover !important;
-            background-attachment: fixed !important;
-        }
-    </style>
 </head>
 <body class="sobre-page">
 
@@ -21,7 +13,7 @@
         <div class="container header-content">
             <a href="../index.html" class="logo" aria-label="Ir para a página inicial">
                 <img src="../img/logo.jpeg" alt="Logo Yasmin Lopes" class="logo-img">
-                 LOPES <span>| PROJETOS</span>
+                LOPES <span>| PROJETOS</span>
             </a>
 
             <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false">
@@ -35,7 +27,7 @@
                 <a href="sobre.html" class="active">Sobre</a>
                 <a href="servicos.html">Serviços</a>
                 <a href="contato.html">Contato</a>
-                <a href="https://wa.me/5515997723131?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="header-button">Falar no WhatsApp</a>
+                <a href="https://wa.me/5515997723131?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener noreferrer" class="header-button">Falar no WhatsApp</a>
             </nav>
         </div>
     </header>
@@ -46,14 +38,14 @@
             <h2>Compromisso com a Legalidade e Eficiência</h2>
         </div>
         
-        <div style="max-width: 800px; margin: 0 auto; text-align: left; line-height: 1.8;">
-            <p style="margin-bottom: 1.5rem;">
+        <div class="about-content">
+            <p>
                 O escritório de projetos <strong>Lopes</strong> atua focado em soluções práticas para quem precisa aprovar projetos e regularizar imóveis com agilidade e total segurança técnica.
             </p>
-            <p style="margin-bottom: 1.5rem;">
+            <p>
                 Sabemos que lidar com burocracia, exigências municipais e documentação técnica pode ser um processo desgastante. Por isso, oferecemos um suporte direto e sem complicação, garantindo que sua obra esteja regularizada perante a prefeitura e órgãos locais do início ao fim.
             </p>
-            <p style="margin-bottom: 1.5rem;">
+            <p>
                 Nosso compromisso é entregar desenhos técnicos precisos, aprovações eficientes e laudos completos, permitindo que você foque no que realmente importa: ver a sua construção acontecer sem imprevistos legais.
             </p>
         </div>
@@ -66,23 +58,12 @@
                     <img src="../img/logo.jpeg" alt="Logo Yasmin Lopes" class="logo-img">
                     LOPES <span>| PROJETOS</span>
                 </a>
-                <p style="margin-top: 8px;">Escritório de Projetos e Legalização de Imóveis • lopesprojetos2026@gmail.com</p>
+                <p class="footer-info">Escritório de Projetos e Legalização de Imóveis • lopesprojetos2026@gmail.com</p>
             </div>
             <p>&copy; 2026 Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script>
-        const menuToggle = document.getElementById('mobile-menu');
-        const navList = document.getElementById('nav-list');
-
-        if (menuToggle && navList) {
-            menuToggle.addEventListener('click', () => {
-                const isOpen = navList.classList.toggle('open');
-                menuToggle.setAttribute('aria-expanded', isOpen);
-            });
-        }
-    </script>
-
+    <script src="../js/main.js"></script>
 </body>
 </html>
