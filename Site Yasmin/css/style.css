@@ -115,7 +115,8 @@ img {
 }
 
 /* Botões */
-.header-button, .button-primary {
+.header-button, 
+.button-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -132,7 +133,8 @@ img {
     text-align: center;
 }
 
-.header-button:hover, .button-primary:hover {
+.header-button:hover, 
+.button-primary:hover {
     background-color: var(--accent-gold);
     border-color: var(--accent-gold);
     color: var(--text-primary) !important;
@@ -245,7 +247,7 @@ body.sobre-page {
 
 .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
 }
 
 .card-number {
