@@ -158,14 +158,27 @@ img {
 }
 
 /* =========================================
-   HERO & CONTEÚDO PRINCIPAL (COM FUNDOS)
+   HERO & CONTEÚDO PRINCIPAL (COM IMAGENS DE FUNDO)
 ========================================= */
 
-/* Fundo da Opção 2 - Aplicado no Hero da index.html */
+/* Fundo da Hero na index.html (Opção 2 - Planta Técnica) */
 .hero {
     padding: 80px 0 60px 0;
-    background: linear-gradient(to right, rgba(248, 247, 245, 0.94) 35%, rgba(248, 247, 245, 0.6)), 
-                url('../img/hero-bg-2.jpg') no-repeat center center/cover;
+    background-image: linear-gradient(to right, rgba(248, 247, 245, 0.92) 35%, rgba(248, 247, 245, 0.45)), 
+                      url('../img/hero-bg-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Fundo para a página sobre.html (Opção 3 - Minimalista Iluminado) */
+body.sobre-page {
+    background-image: linear-gradient(to right, rgba(248, 247, 245, 0.92) 40%, rgba(248, 247, 245, 0.5)), 
+                      url('../img/hero-bg-3.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .small-title {
@@ -199,13 +212,6 @@ img {
 
 .section {
     padding: 60px 0;
-}
-
-/* Fundo da Opção 3 - Aplicado na seção da página sobre.html */
-main.section {
-    background: linear-gradient(to right, rgba(248, 247, 245, 0.95) 45%, rgba(248, 247, 245, 0.5)), 
-                url('../img/hero-bg-3.jpg') no-repeat center center/cover;
-    border-radius: 8px;
 }
 
 .section-title {
