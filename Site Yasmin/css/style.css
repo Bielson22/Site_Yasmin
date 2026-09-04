@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent; /* Remove o destaque cinza ao tocar no iOS/Android */
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -30,7 +30,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden; /* Evita rolagem horizontal acidental em telas pequenas */
+    overflow-x: hidden;
 }
 
 a {
@@ -108,7 +108,7 @@ img {
     font-size: 14px;
     font-weight: 600;
     color: var(--text-muted);
-    padding: 6px 4px; /* Maior área de toque no celular */
+    padding: 6px 4px;
 }
 
 .navigation a:hover,
@@ -117,7 +117,6 @@ img {
     border-bottom: 2px solid var(--accent-gold);
 }
 
-/* Botões com alvos de toque otimizados (mínimo 44px de altura para iOS/Android) */
 .header-button,
 .button-primary {
     display: inline-flex;
@@ -153,7 +152,7 @@ img {
 }
 
 /* =========================================
-   HERO & SEÇÕES
+   HERO & SEÇÕES (IMAGENS DE FUNDO)
 ========================================= */
 
 /* Fundo Hero */
@@ -168,14 +167,26 @@ img {
     image-rendering: crisp-edges;
 }
 
-/* Fundo Sobre (Ajustado para evitar bugs de rolagem no Safari/iOS) */
+/* Fundo Sobre */
 body.sobre-page {
     background-image: linear-gradient(to bottom, rgba(248, 247, 245, 0.88) 0%, rgba(248, 247, 245, 0.50) 100%), 
                       url('../img/Fundo2.png');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
-    background-attachment: scroll; /* Scroll evita travamento de rendering no WebKit/iOS */
+    background-attachment: scroll;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Fundo Contato (Fundo3.jpeg) */
+body.contato-page {
+    background-image: linear-gradient(to bottom, rgba(248, 247, 245, 0.75) 0%, rgba(248, 247, 245, 0.35) 100%), 
+                      url('../img/Fundo3.jpeg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: scroll;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
 }
@@ -249,7 +260,7 @@ body.sobre-page {
 }
 
 .card-link:active {
-    transform: scale(0.98); /* Feedback visual no toque mobile */
+    transform: scale(0.98);
 }
 
 .card-number {
@@ -309,14 +320,13 @@ body.sobre-page {
 
 .footer-info {
     margin-top: 6px;
-    word-break: break-word; /* Evita que o e-mail transborde em telas muito pequenas */
+    word-break: break-word;
 }
 
 /* =========================================
    MEDIA QUERIES (DESKTOP E TABLETS)
 ========================================= */
 
-/* Tablets em diante (min-width: 600px) */
 @media (min-width: 600px) {
     .grid-cards {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -332,6 +342,11 @@ body.sobre-page {
     body.sobre-page {
         background-image: linear-gradient(to right, rgba(248, 247, 245, 0.70) 25%, rgba(248, 247, 245, 0.20)), 
                           url('../img/Fundo2.png');
+    }
+
+    body.contato-page {
+        background-image: linear-gradient(to right, rgba(248, 247, 245, 0.60) 30%, rgba(248, 247, 245, 0.20)), 
+                          url('../img/Fundo3.jpeg');
     }
 
     .card {
@@ -356,7 +371,6 @@ body.sobre-page {
     }
 }
 
-/* Layout Desktop (min-width: 869px) */
 @media (min-width: 869px) {
     .header {
         padding: 16px 0;
@@ -382,7 +396,8 @@ body.sobre-page {
         text-align: left;
     }
 
-    body.sobre-page {
-        background-attachment: fixed; /* Mantém o efeito parallax apenas em desktop */
+    body.sobre-page,
+    body.contato-page {
+        background-attachment: fixed;
     }
 }
