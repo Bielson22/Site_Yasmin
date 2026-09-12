@@ -22,8 +22,10 @@ html {
     scroll-behavior: smooth;
     text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    height: 100%;
 }
 
+/* Ajuste no body para garantir o Sticky Footer */
 body {
     font-family: var(--font-family);
     background-color: var(--bg-main);
@@ -31,6 +33,14 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Faz a tag main (conteúdo) expandir para empurrar o footer até o final */
+main {
+    flex: 1 0 auto;
 }
 
 a {
@@ -61,6 +71,7 @@ img {
     top: 0;
     z-index: 1000;
     padding: 12px 0;
+    flex-shrink: 0;
 }
 
 .header-content {
@@ -296,13 +307,15 @@ body.contato-page {
 }
 
 /* =========================================
-   FOOTER / RODAPÉ
+   FOOTER / RODAPÉ (AJUSTADO)
 ========================================= */
 .footer {
+    width: 100%;
     background: #FFFFFF;
     border-top: 1px solid var(--border-color);
     padding: 32px 0;
-    margin-top: 40px;
+    margin-top: auto; /* Empurra o rodapé para o fim da tela quando o conteúdo for curto */
+    flex-shrink: 0;
 }
 
 .footer-content {
@@ -366,7 +379,6 @@ body.contato-page {
     }
 
     .footer {
-        margin-top: 80px;
         padding: 40px 0;
     }
 }
